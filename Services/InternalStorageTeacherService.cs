@@ -7,12 +7,12 @@ using Microsoft.Extensions.Logging;
 
 namespace efconsole.services
 {
-    public class InternalStorageService : IStorageTeacherService
+    public class InternalStorageTeacherService : IStorageTeacherService
     {
         private readonly List<Teacher> _teacher;
-        private readonly ILogger<InternalStorageService> _logger;
+        private readonly ILogger<InternalStorageTeacherService> _logger;
 
-        public InternalStorageService(ILogger<InternalStorageService> logger)
+        public InternalStorageTeacherService(ILogger<InternalStorageTeacherService> logger)
         {
             _teacher = new List<Teacher>();
             _logger = logger;

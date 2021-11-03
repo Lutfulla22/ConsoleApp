@@ -33,8 +33,10 @@ namespace efconsole
                 }, ServiceLifetime.Singleton);
 
             services.AddHostedService<ConsoleService>();
-            services.AddTransient<IStorageTeacherService, DbStorageService>();
-            services.AddTransient<InternalStorageService>();
+            services.AddTransient<IStorageTeacherService, DbStorageTeacherService>();
+            services.AddTransient<DbStorageStudentService>();
+            services.AddTransient<InternalStorageTeacherService>();
+            services.AddTransient<InternalStorageStudentService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

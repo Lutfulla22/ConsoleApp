@@ -15,15 +15,15 @@ namespace efconsole.services
         Task<Teacher> GetTeacherAsync(Guid id);
 
     }
-    // public interface IStorageStudentService
-    // {
-    //     Task<(bool IsSuccess, Exception exception)> InsertUserAsync(Student student);
-    //     Task<(bool IsSuccess, Exception exception)> UpdateUserAsync(Student student);
-    //     Task<bool> ExistsAsync(string firstname);
-    //     Task<bool> ExistAsync(Guid id);
-    //     Task<(bool IsSuccess, Exception exception, Teacher teacher)> RemoveAsync(Student student);
-    //     Task<Student> GetStudentAsync(string firstname);
-    //     Task<Student> GetStudentAsync(Guid id);
+    public interface IStorageStudentService
+    {
+        Task<(bool IsSuccess, Exception exception)> InsertUserAsync(Student student);
+        Task<(bool IsSuccess, Exception exception)> UpdateUserAsync(Student student);
+        Task<bool> ExistsAsync(string firstname);
+        Task<bool> ExistAsync(Guid id);
+        Task<(bool IsSuccess, Exception exception, Student student)> RemoveAsync(Student student);
+        Task<Student> GetStudentAsync(string firstname);
+        Task<Student> GetStudentAsync(Guid id);
 
-    // }
+    }
 }

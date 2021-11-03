@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace efconsole.services
 {
-    public class DbStorageService : IStorageTeacherService
+    public class DbStorageTeacherService : IStorageTeacherService
     {
         private readonly ConsoleDbContext _context;
 
-        public DbStorageService(ConsoleDbContext context)
+        public DbStorageTeacherService(ConsoleDbContext context)
         {
             _context = context;
         }
